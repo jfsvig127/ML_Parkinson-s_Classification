@@ -26,15 +26,15 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from imblearn.pipeline import Pipeline
 
-# Import data
-filepath = r"C:\Users\Jenna\Documents\School\Graduate\Fall 2024\MP&C\Project\Parkinson_Data_Raw.csv";
+# Import data here
+#filepath = ;
 df = pd.read_csv(filepath)
 
 # df.info()
 # df.describe()
 # df.head(5)
 
-# Drop name - not needed, string to float errrors
+# Drop name - not needed, string to float errors
 df['name_prefix'] = df['name'].str[:12]
 name_prefix = df['name_prefix']
 df = df.drop('name', axis=1)
